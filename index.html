@@ -14,13 +14,10 @@
     ws.send("Client message: Hi!");
   }
 
-
   // 서버로 부터 메시지를 수신한다
   ws.onmessage = function(event) {
     console.log("Server message: ", event.data);
-    document.write("Server message: ", event.data);
   }
-
 
   // error event handler
   ws.onerror = function(event) {

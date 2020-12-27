@@ -1,13 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Native WebSocket Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 <script>
   // 웹소켓 전역 객체 생성
-  var ws = new WebSocket("ws://localhost:3000");
+  var ws = new WebSocket("ws://localhost:3000", "echo-protocol");
 
   // 연결이 수립되면 서버에 메시지를 전송한다
   ws.onopen = function(event) {
